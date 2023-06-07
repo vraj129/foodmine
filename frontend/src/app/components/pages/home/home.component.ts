@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
         this.foods = this.foodService.getAllFoodsBySearchTerm(params.searchTerm);
       }
       else {
+
+
         this.foods = foodService.getAll();
       }
     });
