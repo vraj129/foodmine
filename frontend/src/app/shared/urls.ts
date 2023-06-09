@@ -9,3 +9,5 @@ export const GET_ALL_TAGS = BASE_URL + "/api/tags";
 export const GET_SEARCHED_TAG = BASE_URL + "/api/tags/";
 
 export const GET_FOOD_BY_ID = BASE_URL + "/api/foods/";
+
+export const LOGIN_USER = BASE_URL +"/api/user/login";

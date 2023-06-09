@@ -1,11 +1,13 @@
 import express from 'express';
 import cors from 'cors';
-import { sample_foods, sample_tags } from './data';
+import jwt from 'jsonwebtoken';
+import { sample_foods, sample_tags, sample_users } from './data';
 
 const PORT = 5000;
 
 const app = express();
 
+app.use(express.json());
 app.use(cors({
     credentials:true,
     origin:["http://localhost:4200"]
@@ -46,6 +48,30 @@ app.get('/api/foods/:foodId',(req,res) => {
     if(!food) return res.sendStatus(404);
     return res.send(food);
 });
+
+app.post('/api/user/login',(req,res) =>{
+    const {email,password} = req.body;
+    const user = sample_users.find((u) => {
+        return u.email === email && u.password === password;
+    });
+    if(user){
+        res.send(generateTokenRespone(user));
+    }
+    else {
+        res.status(400).send("User not found !!!");
+    }
+});
+
+const generateTokenRespone = (user:any) => {
+    const token = jwt.sign({
+        email:user.email , isAdmin:user.isAdmin
+    }, 'someRandomText',{
+        expiresIn:'30d'
+    });
+
+    user.token = token;
+    return user;
+}
 
 app.listen(PORT,() => {
     console.log(`Server listening on ${PORT}`);
