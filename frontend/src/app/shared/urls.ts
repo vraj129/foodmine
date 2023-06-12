@@ -10,4 +10,6 @@ export const GET_SEARCHED_TAG = BASE_URL + "/api/foods/tags/";
 
 export const GET_FOOD_BY_ID = BASE_URL + "/api/foods/";
 
-export const LOGIN_USER = BASE_URL +"/api/user/login";
+export const LOGIN_USER = BASE_URL + "/api/user/login";
+
+export const REGISTER_USER = BASE_URL + "/api/user/register";
