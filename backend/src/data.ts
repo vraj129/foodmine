@@ -14,7 +14,7 @@ export const sample_foods: any[] = [
   },
   {
     id:'2',
-    name: 'Meatball',
+    name: 'Manchurian',
     price: 20,
     cookTime: '20-30',
     favorite: true,
