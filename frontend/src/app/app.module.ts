@@ -17,6 +17,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
+import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
+import { TextInputComponent } from './components/partials/text-input/text-input.component';
+import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { StarRatingComponent } from './components/partials/star-rating/star-rati
     TitleComponent,
     NotFoundComponent,
     LoginPageComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    InputContainerComponent,
+    InputValidationComponent,
+    TextInputComponent,
+    DefaultButtonComponent
   ],
   imports: [
     BrowserModule,
