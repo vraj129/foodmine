@@ -5,6 +5,7 @@ import express from 'express';
 import cors from 'cors';
 import foodRouter from './routers/food.router';
 import userRouter from './routers/user.router';
+import orderRouter from './routers/order.router';
 import { dbConnect } from './configs/database.config';
 dbConnect();
 const PORT = 5000;
@@ -19,6 +20,7 @@ app.use(cors({
 
 app.use("/api/foods", foodRouter);
 app.use("/api/user", userRouter);
+app.use("/api/orders", orderRouter);
 
 
 app.listen(PORT, () => {

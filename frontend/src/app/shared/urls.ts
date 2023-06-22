@@ -13,3 +13,7 @@ export const GET_FOOD_BY_ID = BASE_URL + "/api/foods/";
 export const LOGIN_USER = BASE_URL + "/api/user/login";
 
 export const REGISTER_USER = BASE_URL + "/api/user/register";
+
+export const ORDERS_URL = BASE_URL + '/api/orders';
+
+export const ORDER_CREATE_URL = ORDERS_URL + '/CREATE';
