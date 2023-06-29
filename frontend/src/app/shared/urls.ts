@@ -22,3 +22,5 @@ export const ORDER_NEW_FOR_CURRENT_USER_URL = ORDERS_URL + '/newOrderForCurrentU
 
 export const ORDER_PAY_URL = ORDERS_URL + '/pay';
 
+export const ORDER_TRACK_URL = ORDERS_URL + '/track/';
+
